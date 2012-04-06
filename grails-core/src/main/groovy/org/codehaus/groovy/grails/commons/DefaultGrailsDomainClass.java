@@ -675,7 +675,7 @@ public class DefaultGrailsDomainClass extends AbstractGrailsClass implements Gra
                 GrailsDomainClass referencedDomainClass = prop.getReferencedDomainClass();
                 if (referencedDomainClass != null) {
                     String restOfPropertyName = name.substring(indexOfDot + 1);
-                    return referencedDomainClass.getPropertyByName(restOfPropertyName);
+                    return referencedDomainClass.getPersistentProperty(restOfPropertyName);
                 }
             }
         }
